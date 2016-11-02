@@ -82,7 +82,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "A valid accessToken."
                 }
             ],
@@ -102,7 +102,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "A valid accessToken."
                 }
             ],
@@ -122,7 +122,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "A valid accessToken."
                 },
                 {
@@ -147,7 +147,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "A valid accessToken."
                 },
                 {
@@ -172,7 +172,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "A valid accessToken."
                 },
                 {
@@ -197,7 +197,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "A valid accessToken."
                 },
                 {
@@ -262,7 +262,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "A valid accessToken."
                 },
                 {
@@ -327,7 +327,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "A valid accessToken."
                 },
                 {
