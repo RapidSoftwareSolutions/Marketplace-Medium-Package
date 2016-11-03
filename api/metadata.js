@@ -18,7 +18,8 @@ module.exports.do = function(req, res){
                 {
                     name: "code",
                     type: "String",
-                    info: "The authorization code you received in the previous step."
+                    info: "The authorization code you received in the previous step.",
+                    test: "coassdade"
                 },
                 {
                     name: "clientId",
@@ -97,76 +98,6 @@ module.exports.do = function(req, res){
                 }
             ]
         }, {
-            "name":"getUser",
-            "description": "Returns details of the user who has granted permission to the application.",
-            "args":[
-                {
-                    name: "accessToken",
-                    type: "credentials",
-                    info: "A valid accessToken."
-                }
-            ],
-            'callbacks':[
-                {
-                    'name':'error',
-                    'info': 'Error'
-                },
-                {
-                    'name':'success',
-                    'info': 'Success'
-                }
-            ]
-        }, {
-            "name":"getUserPublications",
-            "description": "Returns a full list of publications that the user is related to in some way: This includes all publications the user is subscribed to, writes to, or edits. This endpoint offers a set of data similar to what you’ll see at https://medium.com/me/publications when logged in.",
-            "args":[
-                {
-                    name: "accessToken",
-                    type: "credentials",
-                    info: "A valid accessToken."
-                },
-                {
-                    name: "userId",
-                    type: "String",
-                    info: "A valid user id."
-                }
-            ],
-            'callbacks':[
-                {
-                    'name':'error',
-                    'info': 'Error'
-                },
-                {
-                    'name':'success',
-                    'info': 'Success'
-                }
-            ]
-        }, {
-            "name":"getPublicationContributors",
-            "description": "Returns a full list of publications that the user is related to in some way: This includes all publications the user is subscribed to, writes to, or edits. This endpoint offers a set of data similar to what you’ll see at https://medium.com/me/publications when logged in.",
-            "args":[
-                {
-                    name: "accessToken",
-                    type: "credentials",
-                    info: "A valid accessToken."
-                },
-                {
-                    name: "publicationId",
-                    type: "String",
-                    info: "A valid publication id."
-                }
-            ],
-            'callbacks':[
-                {
-                    'name':'error',
-                    'info': 'Error'
-                },
-                {
-                    'name':'success',
-                    'info': 'Success'
-                }
-            ]
-        }, {
             "name":"getPublicationContributors",
             "description": "Returns a full list of publications that the user is related to in some way: This includes all publications the user is subscribed to, writes to, or edits. This endpoint offers a set of data similar to what you’ll see at https://medium.com/me/publications when logged in.",
             "args":[
@@ -203,21 +134,25 @@ module.exports.do = function(req, res){
                 {
                     name: "authorId",
                     type: "String",
-                    info: "A valid authorId."
+                    info: "A valid authorId.",
+                    test: "14cace524ae80ea468328afc198563ac86b8137b59fa3d7dd2a16f497df089d13"
                 },
                 {
                     name: "title",
                     type: "String",
-                    info: "The title of the post. Note that this title is used for SEO and when rendering the post as a listing, but will not appear in the actual post—for that, the title must be specified in the content field as well. Titles longer than 100 characters will be ignored. In that case, a title will besynthesized from the first content in the post when it is published.."
+                    info: "The title of the post. Note that this title is used for SEO and when rendering the post as a listing, but will not appear in the actual post—for that, the title must be specified in the content field as well. Titles longer than 100 characters will be ignored. In that case, a title will besynthesized from the first content in the post when it is published..",
+                    test: "Test"
                 },
                 {
                     name: "contentFormat",
                     type: "String",
+                    test: "html",
                     info: 'The format of the "content" field. There are two values, "html", and "markdown".',
                 },
                 {
                     name: "content",
                     type: "String",
+                    test: "test",
                     info: 'The body of the post, in a valid, semantic, HTMLfragment, or Markdown. Further markups may be supported in the future. For a full list of accepted HTML tags, see here. If you want your title to appear on the post page, you must also include it as part of the post content.',
                 },
                 {
@@ -233,6 +168,7 @@ module.exports.do = function(req, res){
                 {
                     name: "publishStatus",
                     type: "String",
+                    test: "drafts",
                     info: "The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”."
                 },
                 {
@@ -333,7 +269,8 @@ module.exports.do = function(req, res){
                 {
                     name: "image",
                     type: "String",
-                    info: "Image to upload."
+                    info: "Image to upload.",
+                    test: "https://i.vimeocdn.com/portrait/58832_300x300"
                 }
             ],
             'callbacks':[
