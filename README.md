@@ -1,5 +1,4 @@
 # Medium Package
-Build amazing apps with the world’s best image and video recognition API.
 * Domain: medium.com
 * Credentials: accessToken
 
