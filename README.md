@@ -9,9 +9,6 @@ Build amazing apps with the world’s best image and video recognition API.
 2. Find `Integration tokens` section and press `Get integration token` botton.
 
 If you want to provide oauth in your app, use [getAccessToken](#getAccessToken) and read more about [Medium Authentication](https://github.com/Medium/medium-api-docs#2-authentication).
-## How to get credentials: 
-0. Item one 
-1. Item two
 
 ## TOC: 
 * [getAccessToken](#getAccessToken)
