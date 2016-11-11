@@ -1,6 +1,6 @@
 # Medium Package
 Build amazing apps with the world’s best image and video recognition API.
-* Domain: clarifai.com
+* Domain: medium.com
 * Credentials: accessToken
 
 ## How to get credentials: 
