@@ -9,7 +9,8 @@ module.exports = (req, res) => {
     } = req.body.args;
 
 
-    if(!accessToken || !publicationId) throw new Error('accessToken and publicationId is required.');
+    if(!accessToken || !publicationId) 
+        throw new ValidationError(['accessToken', 'publicationId']);
 
     let options = {
         url:    `https://api.medium.com/v1/publications/${publicationId}/contributors`,

@@ -11,7 +11,8 @@ module.exports = (req, res) => {
     } = req.body.args;
 
 
-    if(!clientId || !clientSecret || !code || !redirectUri) throw new Error('All fields are required.');
+    if(!clientId || !clientSecret || !code || !redirectUri) 
+        throw new ValidationError(['Fill all fields']);
 
     let options = {
         url:    'https://api.medium.com/v1/tokens',

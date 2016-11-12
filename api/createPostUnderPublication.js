@@ -18,7 +18,7 @@ module.exports = (req, res) => {
 
 
     if(!accessToken || !publicationId || !title || !contentFormat || !content) 
-        throw new Error('Required fields: accessToken, publicationId, title, content.');
+        throw new ValidationError(['accessToken', 'publicationId', 'title', 'content']);
 
     if(tags) {
         try {
@@ -29,6 +29,7 @@ module.exports = (req, res) => {
     }
 
     let body = lib.clearArgs({
+        //publicationId,
         title,
         contentFormat,
         content,

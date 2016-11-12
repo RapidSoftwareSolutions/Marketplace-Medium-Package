@@ -1,6 +1,14 @@
 'use strict';
 global.PACKAGE_NAME = "Medium";
 
+global.ValidationError = function(fields) {
+    this.text   = 'Please, check and fill in required fields';
+    this.fields = fields || [];
+}
+
+ValidationError.prototype = Object.create(Error.prototype);
+ValidationError.prototype.constructor = ValidationError;
+
 const express       = require('express');
 const request       = require('request');
 const bodyParser    = require('body-parser');
@@ -16,14 +24,6 @@ const opn           = require('opn');
 app.use(bodyParser.json(({limit: '50mb'})));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.all(`/api/${PACKAGE_NAME}`, require('./api/metadata.js').do);
-
-app.all(`/api/${PACKAGE_NAME}/authlink`, (req, res) => {
-    opn("https://medium.com/m/oauth/authorize?client_id=da7fc5b3465&scope=basicProfile,publishPost,listPublications&state=state&response_type=code&redirect_uri=http://08bd4b2c.ngrok.io/api/Medium/callback");
-});
-
-app.all(`/api/${PACKAGE_NAME}/callback`, (req, res) => {
-    res.send(200);
-});
 
 for(let route in API) {
     app.post(`/api/${PACKAGE_NAME}/${route}`, _(function* (req, res) {
@@ -41,7 +41,7 @@ for(let route in API) {
             r.contextWrites[to] = JSON.parse(response);
         } catch(e) {
             r.callback          = 'error';
-            r.contextWrites[to] =  typeof e == 'object' ? e.message ? e.message : JSON.stringify(e) : e;
+            r.contextWrites[to] =  typeof e == 'object' ? e.message ? e.message : e : e;
         }
 
         res.status(200).send(r);

@@ -14,7 +14,7 @@ module.exports = (req, res) => {
 
 
     if(!accessToken || !image) 
-        throw new Error('Required fields: accessToken, image.');
+        throw new ValidationError(['accessToken', 'image']);
 
     const defered = Q.defer();
 

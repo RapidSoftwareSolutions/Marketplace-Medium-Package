@@ -8,7 +8,7 @@ module.exports = (req, res) => {
     } = req.body.args;
 
 
-    if(!accessToken) throw new Error('accessToken is required.');
+    if(!accessToken) throw new ValidationError(['accessToken']);
 
     let options = {
         url:    'https://api.medium.com/v1/me',

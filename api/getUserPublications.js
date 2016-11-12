@@ -9,7 +9,7 @@ module.exports = (req, res) => {
     } = req.body.args;
 
 
-    if(!accessToken || !userId) throw new Error('accessToken and userId is required.');
+    if(!accessToken || !userId) throw new ValidationError(['accessToken', 'userId']);
 
     let options = {
         url:    `https://api.medium.com/v1/users/${userId}/publications`,

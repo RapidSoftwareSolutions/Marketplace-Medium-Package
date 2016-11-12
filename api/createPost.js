@@ -18,7 +18,7 @@ module.exports = (req, res) => {
 
 
     if(!accessToken || !authorId || !title || !contentFormat || !content) 
-        throw new Error('Required fields: accessToken, authorId, title, content.');
+        throw new ValidationError(['accessToken', 'authorId', 'title', 'content']);
 
     if(tags) {
         try {
