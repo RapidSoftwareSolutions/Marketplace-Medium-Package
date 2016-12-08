@@ -2,7 +2,8 @@
 global.PACKAGE_NAME = "Medium";
 
 global.ValidationError = function(fields) {
-    this.text   = 'Please, check and fill in required fields';
+    this.status_code = 'REQUIRED_FIELDS',
+    this.status_msg  = 'Please, check and fill in required fields';
     this.fields = fields || [];
 }
 
@@ -41,7 +42,7 @@ for(let route in API) {
             r.contextWrites[to] = JSON.parse(response);
         } catch(e) {
             r.callback          = 'error';
-            r.contextWrites[to] =  typeof e == 'object' ? e.message ? e.message : e : e;
+            r.contextWrites[to] = e.status_code ? e : {status_code: 'API_ERROR', status_msg: e}
         }
 
         res.status(200).send(r);

@@ -19,22 +19,26 @@ res.status(200).send({
         {
           "name": "code",
           "type": "String",
-          "info": "Required: The authorization code you received in the previous step."
+          "info": " The authorization code you received in the previous step.",
+          "required": true
         },
         {
           "name": "clientId",
           "type": "String",
-          "info": "Required: Your integration’s clientId"
+          "info": " Your integration’s clientId",
+          "required": true
         },
         {
           "name": "clientSecret",
           "type": "String",
-          "info": "Required: Your integration’s clientSecret"
+          "info": " Your integration’s clientSecret",
+          "required": true
         },
         {
           "name": "redirectUri",
           "type": "String",
-          "info": "Required: The same redirect_uri you specified when requesting an authorization code."
+          "info": " The same redirect_uri you specified when requesting an authorization code.",
+          "required": true
         }
       ],
       "callbacks": [
@@ -55,17 +59,20 @@ res.status(200).send({
         {
           "name": "refreshToken",
           "type": "String",
-          "info": "Required: The authorization code you received in the previous step."
+          "info": " The authorization code you received in the previous step.",
+          "required": true
         },
         {
           "name": "clientId",
           "type": "String",
-          "info": "Required: Your integration’s clientId"
+          "info": " Your integration’s clientId",
+          "required": true
         },
         {
           "name": "clientSecret",
           "type": "String",
-          "info": "Required: Your integration’s clientSecret"
+          "info": " Your integration’s clientSecret",
+          "required": true
         }
       ],
       "callbacks": [
@@ -86,7 +93,8 @@ res.status(200).send({
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Required: A valid accessToken."
+          "info": " A valid accessToken.",
+          "required": true
         }
       ],
       "callbacks": [
@@ -107,12 +115,14 @@ res.status(200).send({
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Required: A valid accessToken."
+          "info": " A valid accessToken.",
+          "required": true
         },
         {
           "name": "publicationId",
           "type": "String",
-          "info": "Required: A valid publication id."
+          "info": " A valid publication id.",
+          "required": true
         }
       ],
       "callbacks": [
@@ -133,52 +143,62 @@ res.status(200).send({
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Required: A valid accessToken."
+          "info": " A valid accessToken.",
+          "required": true
         },
         {
           "name": "authorId",
           "type": "String",
-          "info": "Required: A valid authorId."
+          "info": " A valid authorId.",
+          "required": true
         },
         {
           "name": "title",
           "type": "String",
-          "info": "Required: The title of the post. Note that this title is used for SEO and when rendering the post as a listing, but will not appear in the actual post—for that, the title must be specified in the content field as well. Titles longer than 100 characters will be ignored. In that case, a title will besynthesized from the first content in the post when it is published.."
+          "info": " The title of the post. Note that this title is used for SEO and when rendering the post as a listing, but will not appear in the actual post—for that, the title must be specified in the content field as well. Titles longer than 100 characters will be ignored. In that case, a title will besynthesized from the first content in the post when it is published..",
+          "required": true
         },
         {
           "name": "contentFormat",
           "type": "String",
-          "info": "Required: The format of the \"content\" field. There are two values, \"html\", and \"markdown\"."
+          "info": " The format of the \"content\" field. There are two values, \"html\", and \"markdown\".",
+          "required": true
         },
         {
           "name": "content",
           "type": "String",
-          "info": "Required: The body of the post, in a valid, semantic, HTMLfragment, or Markdown. Further markups may be supported in the future. For a full list of accepted HTML tags, see here. If you want your title to appear on the post page, you must also include it as part of the post content."
+          "info": " The body of the post, in a valid, semantic, HTMLfragment, or Markdown. Further markups may be supported in the future. For a full list of accepted HTML tags, see here. If you want your title to appear on the post page, you must also include it as part of the post content.",
+          "required": true
         },
         {
           "name": "tags",
           "type": "String",
-          "info": "Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored."
+          "info": "Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.",
+          "required": false
         },
         {
           "name": "canonicalUrl",
           "type": "String",
-          "info": "Optional: The original home of this content, if it was originally published elsewhere."
+          "info": "Optional: The original home of this content, if it was originally published elsewhere.",
+          "required": false
         },
         {
           "name": "publishStatus",
           "type": "String",
-          "info": "Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”."
+          "info": "Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”.",
+          "required": false
         },
         {
           "name": "license",
           "type": "String",
-          "info": "Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”."
+          "info": "Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”.",
+          "required": false
         },
         {
           "name": "notifyFollowers",
           "type": "String",
-          "info": "Optional: Whether to notifyFollowers that the user has published."
+          "info": "Optional: Whether to notifyFollowers that the user has published.",
+          "required": false
         }
       ],
       "callbacks": [
@@ -199,52 +219,62 @@ res.status(200).send({
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Required: A valid accessToken."
+          "info": " A valid accessToken.",
+          "required": true
         },
         {
           "name": "publicationId",
           "type": "String",
-          "info": "Required: A valid publicationId."
+          "info": " A valid publicationId.",
+          "required": true
         },
         {
           "name": "title",
           "type": "String",
-          "info": "Required: The title of the post. Note that this title is used for SEO and when rendering the post as a listing, but will not appear in the actual post—for that, the title must be specified in the content field as well. Titles longer than 100 characters will be ignored. In that case, a title will besynthesized from the first content in the post when it is published.."
+          "info": " The title of the post. Note that this title is used for SEO and when rendering the post as a listing, but will not appear in the actual post—for that, the title must be specified in the content field as well. Titles longer than 100 characters will be ignored. In that case, a title will besynthesized from the first content in the post when it is published..",
+          "required": true
         },
         {
           "name": "contentFormat",
           "type": "String",
-          "info": "Required: The format of the \"content\" field. There are two values, \"html\", and \"markdown\"."
+          "info": " The format of the \"content\" field. There are two values, \"html\", and \"markdown\".",
+          "required": true
         },
         {
           "name": "content",
           "type": "String",
-          "info": "Required: The body of the post, in a valid, semantic, HTMLfragment, or Markdown. Further markups may be supported in the future. For a full list of accepted HTML tags, see here. If you want your title to appear on the post page, you must also include it as part of the post content."
+          "info": " The body of the post, in a valid, semantic, HTMLfragment, or Markdown. Further markups may be supported in the future. For a full list of accepted HTML tags, see here. If you want your title to appear on the post page, you must also include it as part of the post content.",
+          "required": true
         },
         {
           "name": "tags",
           "type": "String",
-          "info": "Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored."
+          "info": "Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.",
+          "required": false
         },
         {
           "name": "canonicalUrl",
           "type": "String",
-          "info": "Optional: The original home of this content, if it was originally published elsewhere."
+          "info": "Optional: The original home of this content, if it was originally published elsewhere.",
+          "required": false
         },
         {
           "name": "publishStatus",
           "type": "String",
-          "info": "Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”."
+          "info": "Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”.",
+          "required": false
         },
         {
           "name": "license",
           "type": "String",
-          "info": "Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”."
+          "info": "Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”.",
+          "required": false
         },
         {
           "name": "notifyFollowers",
           "type": "String",
-          "info": "Optional: Whether to notifyFollowers that the user has published."
+          "info": "Optional: Whether to notifyFollowers that the user has published.",
+          "required": false
         }
       ],
       "callbacks": [
@@ -265,12 +295,14 @@ res.status(200).send({
         {
           "name": "accessToken",
           "type": "credentials",
-          "info": "Required: A valid accessToken."
+          "info": " A valid accessToken.",
+          "required": true
         },
         {
           "name": "image",
           "type": "String",
-          "info": "Required: Image to upload."
+          "info": " Image to upload.",
+          "required": true
         }
       ],
       "callbacks": [
