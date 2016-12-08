@@ -2,6 +2,7 @@ module.exports.do = function(req, res){
 res.status(200).send({
   "package": "Medium",
   "tagline": "Medium API Package",
+  "keywords": ["API", "marketing", "post", "posting", "publication", "social", "writing"],
   "description": "Read, write, and interact with the stories that matter most to you.",
   "image": "https://cdn-images-1.medium.com/max/400/1*QnlI8nTg-t9G3pLrxbX9-w.png",
   "repo": "https://github.com/RapidSoftwareSolutions/",
@@ -300,8 +301,8 @@ res.status(200).send({
         },
         {
           "name": "image",
-          "type": "String",
-          "info": " Image to upload.",
+          "type": "File",
+          "info": "Image to upload.",
           "required": true
         }
       ],
