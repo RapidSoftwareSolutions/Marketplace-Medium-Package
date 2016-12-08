@@ -126,5 +126,5 @@ Most integrations will not need to use this resource. Medium will automatically 
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: A valid accessToken.
-| image      | String     | Required: Image to upload.
+| image      | File       | Required: Image to upload.
 
