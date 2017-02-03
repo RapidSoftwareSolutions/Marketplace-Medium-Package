@@ -21,7 +21,8 @@ res.status(200).send({
           "name": "code",
           "type": "String",
           "info": " The authorization code you received in the previous step.",
-          "required": true
+          "required": true,
+          "generator": "http://rapidoauth.com/medium"
         },
         {
           "name": "clientId",
