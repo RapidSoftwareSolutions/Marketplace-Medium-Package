@@ -1,3 +1,5 @@
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Medium/functions?utm_source=RapidAPIGitHub_MediumFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
 # Medium Package
 * Domain: medium.com
 * Credentials: accessToken
