@@ -9,7 +9,8 @@ res.status(200).send({
   "accounts": {
     "domain": "medium.com",
     "credentials": [
-      "accessToken"
+      "clientId",
+      "clientSecret"
     ]
   },
   "blocks": [
@@ -18,23 +19,23 @@ res.status(200).send({
       "description": "In order to publish on behalf of a Medium account, you will need an access token. An access token grants limited access to a user’s account. We offer two ways to acquire an access token: browser-based OAuth authentication, and self-issued access tokens.",
       "args": [
         {
-          "name": "code",
-          "type": "String",
-          "info": " The authorization code you received in the previous step.",
-          "required": true,
-          "generator": "http://rapidoauth.com/medium"
-        },
-        {
           "name": "clientId",
-          "type": "String",
+          "type": "credentials",
           "info": " Your integration’s clientId",
           "required": true
         },
         {
           "name": "clientSecret",
-          "type": "String",
+          "type": "credentials",
           "info": " Your integration’s clientSecret",
           "required": true
+        },
+        {
+          "name": "code",
+          "type": "String",
+          "info": " The authorization code you received in the previous step.",
+          "required": true,
+          "generator": "http://rapidoauth.com/medium"
         },
         {
           "name": "redirectUri",
@@ -66,13 +67,13 @@ res.status(200).send({
         },
         {
           "name": "clientId",
-          "type": "String",
+          "type": "credentials",
           "info": " Your integration’s clientId",
           "required": true
         },
         {
           "name": "clientSecret",
-          "type": "String",
+          "type": "credentials",
           "info": " Your integration’s clientSecret",
           "required": true
         }
@@ -94,7 +95,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "String",
           "info": " A valid accessToken.",
           "required": true
         }
@@ -116,7 +117,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "String",
           "info": " A valid accessToken.",
           "required": true
         },
@@ -144,7 +145,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "String",
           "info": " A valid accessToken.",
           "required": true
         },
@@ -220,7 +221,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "String",
           "info": " A valid accessToken.",
           "required": true
         },
@@ -296,7 +297,7 @@ res.status(200).send({
       "args": [
         {
           "name": "accessToken",
-          "type": "credentials",
+          "type": "String",
           "info": " A valid accessToken.",
           "required": true
         },
