@@ -62,7 +62,7 @@ res.status(200).send({
         {
           "name": "refreshToken",
           "type": "String",
-          "info": " The authorization code you received in the previous step.",
+          "info": " The refreshToken you received in the previous step.",
           "required": true
         },
         {
@@ -97,7 +97,8 @@ res.status(200).send({
           "name": "accessToken",
           "type": "String",
           "info": " A valid accessToken.",
-          "required": true
+          "required": true,
+          "generator":"https://rapidoauth.com/medium"
         }
       ],
       "callbacks": [
@@ -119,7 +120,8 @@ res.status(200).send({
           "name": "accessToken",
           "type": "String",
           "info": " A valid accessToken.",
-          "required": true
+          "required": true,
+          "generator":"https://rapidoauth.com/medium"
         },
         {
           "name": "publicationId",
@@ -147,7 +149,8 @@ res.status(200).send({
           "name": "accessToken",
           "type": "String",
           "info": " A valid accessToken.",
-          "required": true
+          "required": true,
+          "generator":"https://rapidoauth.com/medium"
         },
         {
           "name": "authorId",
@@ -223,7 +226,8 @@ res.status(200).send({
           "name": "accessToken",
           "type": "String",
           "info": " A valid accessToken.",
-          "required": true
+          "required": true,
+          "generator":"https://rapidoauth.com/medium"
         },
         {
           "name": "publicationId",
@@ -299,7 +303,8 @@ res.status(200).send({
           "name": "accessToken",
           "type": "String",
           "info": " A valid accessToken.",
-          "required": true
+          "required": true,
+          "generator":"https://rapidoauth.com/medium"
         },
         {
           "name": "image",
