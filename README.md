@@ -96,12 +96,12 @@ Returns a full list of publications that the user is related to in some way: Thi
 | accessToken    | credentials| Required: A valid accessToken.
 | authorId       | String     | Required: A valid authorId.
 | title          | String     | Required: The title of the post. Note that this title is used for SEO and when rendering the post as a listing, but will not appear in the actual post—for that, the title must be specified in the content field as well. Titles longer than 100 characters will be ignored. In that case, a title will besynthesized from the first content in the post when it is published..
-| contentFormat  | String     | Required: The format of the "content" field. There are two values, "html", and "markdown".
+| contentFormat  | Select     | Required: The format of the "content" field. There are two values, "html", and "markdown".
 | content        | String     | Required: The body of the post, in a valid, semantic, HTMLfragment, or Markdown. Further markups may be supported in the future. For a full list of accepted HTML tags, see here. If you want your title to appear on the post page, you must also include it as part of the post content.
-| tags           | String     | Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.
+| tags           | List       | Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.
 | canonicalUrl   | String     | Optional: The original home of this content, if it was originally published elsewhere.
-| publishStatus  | String     | Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”.
-| license        | String     | Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”.
+| publishStatus  | Select     | Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”.
+| license        | Select     | Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”.
 | notifyFollowers| String     | Optional: Whether to notifyFollowers that the user has published.
 
 <a name="createPostUnderPublication"/>
@@ -113,12 +113,12 @@ This API allows creating a post and associating it with a publication on Medium.
 | accessToken    | credentials| Required: A valid accessToken.
 | publicationId  | String     | Required: A valid publicationId.
 | title          | String     | Required: The title of the post. Note that this title is used for SEO and when rendering the post as a listing, but will not appear in the actual post—for that, the title must be specified in the content field as well. Titles longer than 100 characters will be ignored. In that case, a title will besynthesized from the first content in the post when it is published..
-| contentFormat  | String     | Required: The format of the "content" field. There are two values, "html", and "markdown".
+| contentFormat  | Select     | Required: The format of the "content" field. There are two values, "html", and "markdown".
 | content        | String     | Required: The body of the post, in a valid, semantic, HTMLfragment, or Markdown. Further markups may be supported in the future. For a full list of accepted HTML tags, see here. If you want your title to appear on the post page, you must also include it as part of the post content.
-| tags           | String     | Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.
+| tags           | List       | Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.
 | canonicalUrl   | String     | Optional: The original home of this content, if it was originally published elsewhere.
-| publishStatus  | String     | Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”.
-| license        | String     | Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”.
+| publishStatus  | Select     | Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”.
+| license        | Select     | Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”.
 | notifyFollowers| String     | Optional: Whether to notifyFollowers that the user has published.
 
 <a name="uploadImage"/>

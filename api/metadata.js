@@ -166,7 +166,8 @@ res.status(200).send({
         },
         {
           "name": "contentFormat",
-          "type": "String",
+          "type": "Select",
+          "options": ["html", "markdown"],
           "info": " The format of the \"content\" field. There are two values, \"html\", and \"markdown\".",
           "required": true
         },
@@ -178,9 +179,15 @@ res.status(200).send({
         },
         {
           "name": "tags",
-          "type": "String",
+          "type": "List",
           "info": "Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag",
+            "required": false
+          }
         },
         {
           "name": "canonicalUrl",
@@ -190,19 +197,21 @@ res.status(200).send({
         },
         {
           "name": "publishStatus",
-          "type": "String",
+          "type": "Select",
+          "options": ["public", "draft", "unlisted"],
           "info": "Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”.",
           "required": false
         },
         {
           "name": "license",
-          "type": "String",
+          "type": "Select",
+          "options": ["all-rights-reserved", "cc-40-by", "cc-40-by-sa", "cc-40-by-nd", "cc-40-by-nc", "cc-40-by-nc-nd", "cc-40-by-nc-sa", "cc-40-zero", "public-domain"],
           "info": "Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”.",
           "required": false
         },
         {
           "name": "notifyFollowers",
-          "type": "String",
+          "type": "Boolean",
           "info": "Optional: Whether to notifyFollowers that the user has published.",
           "required": false
         }
@@ -243,7 +252,8 @@ res.status(200).send({
         },
         {
           "name": "contentFormat",
-          "type": "String",
+          "type": "Select",
+          "options": ["html", "markdown"],
           "info": " The format of the \"content\" field. There are two values, \"html\", and \"markdown\".",
           "required": true
         },
@@ -255,9 +265,15 @@ res.status(200).send({
         },
         {
           "name": "tags",
-          "type": "String",
+          "type": "List",
           "info": "Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag",
+            "required": false
+          }
         },
         {
           "name": "canonicalUrl",
@@ -267,19 +283,21 @@ res.status(200).send({
         },
         {
           "name": "publishStatus",
-          "type": "String",
+          "type": "Select",
+          "options": ["public", "draft", "unlisted"],
           "info": "Optional: The status of the post. Valid values are “public”, “draft”, or “unlisted”. The default is “public”.",
           "required": false
         },
         {
           "name": "license",
-          "type": "String",
+          "type": "Select",
+          "options": ["all-rights-reserved", "cc-40-by", "cc-40-by-sa", "cc-40-by-nd", "cc-40-by-nc", "cc-40-by-nc-nd", "cc-40-by-nc-sa", "cc-40-zero", "public-domain"],
           "info": "Optional: The license of the post. Valid values are “all-rights-reserved”, “cc-40-by”, “cc-40-by-sa”, “cc-40-by-nd”, “cc-40-by-nc”, “cc-40-by-nc-nd”, “cc-40-by-nc-sa”, “cc-40-zero”, “public-domain”. The default is “all-rights-reserved”.",
           "required": false
         },
         {
           "name": "notifyFollowers",
-          "type": "String",
+          "type": "Boolean",
           "info": "Optional: Whether to notifyFollowers that the user has published.",
           "required": false
         }
