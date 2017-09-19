@@ -13,6 +13,11 @@ res.status(200).send({
       "clientSecret"
     ]
   },
+  "steps": [
+    "Login in or signup to your medium account (https://medium.com/)",
+    "Go to Account Settings (https://medium.com/me/settings)",
+    "Find 'Integration Tokens' section and press Get integration token botton"
+  ],
   "blocks": [
     {
       "name": "getAccessToken",
