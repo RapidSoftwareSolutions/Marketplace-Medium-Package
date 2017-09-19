@@ -6,7 +6,7 @@
 
 ## How to get credentials: 
 0. Login in or signup to your [medium account](https://medium.com/m/signin).
-1. Go to [Account Settings](#https://medium.com/me/settings)
+1. Go to [Account Settings](https://medium.com/me/settings)
 2. Find `Integration tokens` section and press `Get integration token` botton.
 
 If you want to provide oauth in your app, use [getAccessToken](#getAccessToken) and read more about [Medium Authentication](https://github.com/Medium/medium-api-docs#2-authentication).
