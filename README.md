@@ -5,7 +5,7 @@
 * Credentials: accessToken
 
 ## How to get credentials: 
-0. Login in your medium account.
+0. Login in or signup to your [medium account](https://medium.com/m/signin).
 1. Go to [Account Settings](#https://medium.com/me/settings)
 2. Find `Integration tokens` section and press `Get integration token` botton.
 
