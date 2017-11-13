@@ -183,18 +183,6 @@ res.status(200).send({
           "required": true
         },
         {
-          "name": "tags",
-          "type": "List",
-          "info": "Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.",
-          "required": false,
-          "structure": {
-            "name": "tag",
-            "type": "String",
-            "info": "Tag",
-            "required": false
-          }
-        },
-        {
           "name": "canonicalUrl",
           "type": "String",
           "info": "Optional: The original home of this content, if it was originally published elsewhere.",
