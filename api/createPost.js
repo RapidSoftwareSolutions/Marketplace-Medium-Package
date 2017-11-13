@@ -20,13 +20,6 @@ module.exports = (req, res) => {
     if(!accessToken || !authorId || !title || !contentFormat || !content) 
         throw new ValidationError(['accessToken', 'authorId', 'title', 'content']);
 
-    if(tags) {
-        try {
-            tags = JSON.parse(tags);
-        } catch(e) {
-            throw new Error('Invalid tags JSON data. Use ["tag1", "tag2", ...]');
-        }
-    }
 
     let body = lib.clearArgs({
         title,
@@ -38,6 +31,7 @@ module.exports = (req, res) => {
         license,
         notifyFollowers
     });
+
 
     let options = {
         url:    `https://api.medium.com/v1/users/${authorId}/posts`,

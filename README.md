@@ -11,19 +11,7 @@
 
 If you want to provide oauth in your app, use [getAccessToken](#getAccessToken) and read more about [Medium Authentication](https://github.com/Medium/medium-api-docs#2-authentication).
 
-## TOC: 
-* [getAccessToken](#getAccessToken)
-* [revokeAccessToken](#revokeAccessToken)
-* [getUser](#getUser)
-* [getUser](#getUser)
-* [getUserPublications](#getUserPublications)
-* [getPublicationContributors](#getPublicationContributors)
-* [getPublicationContributors](#getPublicationContributors)
-* [createPost](#createPost)
-* [createPostUnderPublication](#createPostUnderPublication)
-* [uploadImage](#uploadImage)
  
-
 ### Medium.getAccessToken
 In order to publish on behalf of a Medium account, you will need an access token. An access token grants limited access to a user’s account. We offer two ways to acquire an access token: browser-based OAuth authentication, and self-issued access tokens.
 
@@ -51,15 +39,6 @@ Returns details of the user who has granted permission to the application.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| Required: A valid accessToken.
-
-
-## Medium.getPublicationContributors
-Returns a full list of publications that the user is related to in some way: This includes all publications the user is subscribed to, writes to, or edits. This endpoint offers a set of data similar to what you’ll see at https://medium.com/me/publications when logged in.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| accessToken  | credentials| Required: A valid accessToken.
-| publicationId| String     | Required: A valid publication id.
 
 
 ## Medium.getPublicationContributors

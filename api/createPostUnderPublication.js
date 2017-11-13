@@ -20,13 +20,6 @@ module.exports = (req, res) => {
     if(!accessToken || !publicationId || !title || !contentFormat || !content) 
         throw new ValidationError(['accessToken', 'publicationId', 'title', 'content']);
 
-    if(tags) {
-        try {
-            tags = JSON.parse(tags);
-        } catch(e) {
-            throw new Error('Invalid tags JSON data. Use ["tag1", "tag2", ...]');
-        }
-    }
 
     let body = lib.clearArgs({
         //publicationId,

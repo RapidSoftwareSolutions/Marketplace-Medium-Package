@@ -182,6 +182,18 @@ res.status(200).send({
           "info": " The body of the post, in a valid, semantic, HTMLfragment, or Markdown. Further markups may be supported in the future. For a full list of accepted HTML tags, see here. If you want your title to appear on the post page, you must also include it as part of the post content.",
           "required": true
         },
+          {
+              "name": "tags",
+              "type": "List",
+              "info": "Optional: Tags to classify the post. Only the first three will be used. Tags longer than 25 characters will be ignored.",
+              "required": false,
+              "structure": {
+                  "name": "tag",
+                  "type": "String",
+                  "info": "Tag",
+                  "required": false
+              }
+          },
         {
           "name": "canonicalUrl",
           "type": "String",
