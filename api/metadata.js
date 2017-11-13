@@ -148,7 +148,7 @@ res.status(200).send({
     },
     {
       "name": "createPost",
-      "description": "Returns a full list of publications that the user is related to in some way: This includes all publications the user is subscribed to, writes to, or edits. This endpoint offers a set of data similar to what you’ll see at https://medium.com/me/publications when logged in.",
+      "description": "Create post.",
       "args": [
         {
           "name": "accessToken",
